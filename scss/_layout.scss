@@ -1,0 +1,137 @@
+/* 
+Layout Rules
+	CSS, by its very nature, is used to lay elements out on the page.
+However, there is a distinction between layouts dictating the major
+and minor components of a page. The minor components—such as
+a callout, or login form, or a navigation item—sit within the scope
+of major components such as a header or footer. I refer to the minor
+components as Modules and will dive into those in the next section.
+The major components are referred to as Layout styles.
+	Layout styles can also be divided into major and minor styles based
+on reuse. Major layout styles such as header and footer are traditionally
+styled using ID selectors but take the time to think about
+the elements that are common across all components of the page
+and use class selectors where appropriate.
+*/
+
+nav[role="navigation"] {
+    background-color: $color;
+    margin-bottom: $gutters;
+    min-height: 25px;
+}
+
+header[role="banner"] {
+    background-color: lighten($color,35%);
+    color: #fff;
+}
+
+.banner-logo {
+    box-sizing: border-box;
+    float: left;
+    padding: $gutters;
+    width: 24%;
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.banner-logo svg {
+    width: 100%;
+}
+
+.banner-text {
+    box-sizing: border-box;
+    float: left;
+    padding: $gutters;
+    width: 76%;
+    @media (max-width: 480px) {
+        font-size: 30px;
+        width: 100%;
+    }
+}
+
+.work {
+    background: url('../img/seattle.jpg') no-repeat center center;
+    background-size: cover;
+    line-height: 300px;
+    @media (max-width: 480px) {
+        line-height: 150px; 
+    }
+    height: 300px;
+    @media (max-width: 480px) {
+        height: 150px;
+    }
+    margin-top: $gutters;
+    text-align: center;
+}
+
+.branding, .interactive, .marketing {
+    box-sizing: border-box;
+    float: left;
+    //margin: 0 $gutters;
+    width: 33.333333%;
+    @media (max-width: 768px) {
+        width: 100%;   
+    }
+    text-align: justify;
+}
+
+.inner {
+    background-color: lighten($color,30%);
+    min-height: 200px;
+}
+
+.branding {
+    padding: $gutters $gutters/2 $gutters 0;
+    @media (max-width: 768px) {
+        padding: $gutters 0 $gutters/2 0;
+    }
+    //padding: top right bottom left;
+} 
+
+.interactive {
+    padding: $gutters $gutters/2 $gutters $gutters/2;
+    @media (max-width: 768px) {
+        padding: $gutters/2 0;
+    }
+    //padding: top right bottom left;
+} 
+
+.marketing {
+    padding: $gutters 0 $gutters $gutters/2;
+    @media (max-width: 768px) {
+        padding: $gutters/2 0 $gutters 0;
+    }
+    //padding: top right bottom left;
+}
+
+footer[role="contentinfo"] {
+    background-color: $color;
+    color: #fff;
+    float: left;
+}
+
+.contentinfo-social, .contentinfo-about {
+    box-sizing: border-box;
+    float: left;
+}
+
+.contentinfo-social {
+    width: 30%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.contentinfo-about {
+    width: 70%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.group:after {
+    clear: both;
+    content: "";
+    display: table;
+}
