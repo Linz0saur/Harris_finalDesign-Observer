@@ -14,15 +14,54 @@ the elements that are common across all components of the page
 and use class selectors where appropriate.
 */
 
-nav[role="navigation"] {
-    background-color: $color;
-    margin-bottom: $gutters;
-    min-height: 25px;
+//.sidebar {
+   // background-color: pink;
+    //position: absolute; this helps to scroll with the page
+   //top: 0;
+   //right: 0;
+    //bottom: 0;
+    //left: 0;
+  //width: 20%;
+//}
+
+html {
+    background-color: #fff;
 }
 
+nav {
+    background-color: #84c0f2;
+    border: 2px;
+    //border-radius: 6px;
+    border-bottom-left-radius: 5px; 
+    border-bottom-left-radius:  5px;
+    border-top: none;
+    margin-left: 1000px;
+    padding: 4px 10px 6px 10px;
+    position: left;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-grid;
+    margin: 0 8px 0 0;
+    padding: 0;
+
+}
+
+nav ul li:last-of-type {
+    margin-right: 0;
+    
+}
+
+
+
 header[role="banner"] {
-    background-color: lighten($color,35%);
-    color: #fff;
+    background-color: #84c0f2 lighten($color,20%);
+    color: #1b5b91;
 }
 
 .banner-logo {
@@ -35,24 +74,22 @@ header[role="banner"] {
     }
 }
 
-.banner-logo svg {
-    width: 100%;
-}
+
 
 .banner-text {
     box-sizing: border-box;
-    float: left;
+    float: right;
     padding: $gutters;
-    width: 76%;
+    width: 78%;
     @media (max-width: 480px) {
         font-size: 30px;
         width: 100%;
     }
 }
 
-.work {
-    background: url('../img/seattle.jpg') no-repeat center center;
-    background-size: cover;
+.icecream {
+    background: url('../img/icecream2.jpg') no-repeat center center;
+    background-size: center;
     line-height: 300px;
     @media (max-width: 480px) {
         line-height: 150px; 
@@ -65,11 +102,11 @@ header[role="banner"] {
     text-align: center;
 }
 
-.branding, .interactive, .marketing {
+.controversy, .interactive {
     box-sizing: border-box;
     float: left;
     //margin: 0 $gutters;
-    width: 33.333333%;
+    width: 50%;
     @media (max-width: 768px) {
         width: 100%;   
     }
@@ -77,58 +114,47 @@ header[role="banner"] {
 }
 
 .inner {
-    background-color: lighten($color,30%);
+    background-color: #fff;
+     color: #1b5b91;
     min-height: 200px;
 }
 
-.branding {
-    padding: $gutters $gutters/2 $gutters 0;
+.controversy {
+    padding: $gutters $gutters/3 $gutters 0;
     @media (max-width: 768px) {
-        padding: $gutters 0 $gutters/2 0;
+        padding: $gutters 0 $gutters/3 0;
     }
     //padding: top right bottom left;
 } 
 
-.interactive {
-    padding: $gutters $gutters/2 $gutters $gutters/2;
+.difference {
+    padding: $gutters $gutters/3 $gutters $gutters/2;
     @media (max-width: 768px) {
-        padding: $gutters/2 0;
+        padding: $gutters/3 0;
     }
     //padding: top right bottom left;
 } 
 
-.marketing {
-    padding: $gutters 0 $gutters $gutters/2;
-    @media (max-width: 768px) {
-        padding: $gutters/2 0 $gutters 0;
-    }
-    //padding: top right bottom left;
-}
 
 footer[role="contentinfo"] {
-    background-color: $color;
+    background-color: #1b5b91 ;
     color: #fff;
     float: left;
 }
 
 .contentinfo-social, .contentinfo-about {
     box-sizing: border-box;
-    float: left;
+    float: Left;
 }
 
-.contentinfo-social {
-    width: 30%;
+.contentinfo {
+    width: 100%;
     @media (max-width: 768px) {
         width: 100%;
     }
 }
 
-.contentinfo-about {
-    width: 70%;
-    @media (max-width: 768px) {
-        width: 100%;
-    }
-}
+
 
 .group:after {
     clear: both;
