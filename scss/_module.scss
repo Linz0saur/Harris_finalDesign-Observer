@@ -19,3 +19,33 @@ use descendent or child selectors to target those elements.
     @include fontSize(80px);
     margin: 0;
 }
+
+ nav {
+    background-color: #84c0f2;
+    border: 2px;
+    //border-radius: 6px;
+    border-bottom-left-radius: 5px; 
+    border-bottom-left-radius:  5px;
+    border-top: none;
+    margin-left: 1000px;
+    padding: 4px 10px 6px 10px;
+    position: left;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    padding: 0;
+
+}
+
+nav ul li:last-of-type {
+    margin-right: 0;
+    
+}
+

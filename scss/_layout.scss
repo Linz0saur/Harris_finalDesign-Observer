@@ -28,37 +28,6 @@ html {
     background-color: #fff;
 }
 
-nav {
-    background-color: #84c0f2;
-    border: 2px;
-    //border-radius: 6px;
-    border-bottom-left-radius: 5px; 
-    border-bottom-left-radius:  5px;
-    border-top: none;
-    margin-left: 1000px;
-    padding: 4px 10px 6px 10px;
-    position: left;
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-grid;
-    margin: 0 8px 0 0;
-    padding: 0;
-
-}
-
-nav ul li:last-of-type {
-    margin-right: 0;
-    
-}
-
-
-
 header[role="banner"] {
     background-color: #84c0f2 lighten($color,20%);
     color: #1b5b91;
@@ -86,6 +55,10 @@ header[role="banner"] {
         width: 100%;
     }
 }
+
+
+
+
 
 .icecream {
     background: url('../img/icecream2.jpg') no-repeat center center;
@@ -120,7 +93,7 @@ header[role="banner"] {
 }
 
 .controversy {
-    padding: $gutters $gutters/3 $gutters 0;
+    padding: $gutters $gutters/1 $gutters 0;
     @media (max-width: 768px) {
         padding: $gutters 0 $gutters/3 0;
     }
@@ -128,9 +101,9 @@ header[role="banner"] {
 } 
 
 .difference {
-    padding: $gutters $gutters/3 $gutters $gutters/2;
+    padding: $gutters $gutters/1 $gutters $gutters/1;
     @media (max-width: 768px) {
-        padding: $gutters/3 0;
+        padding: $gutters/1 0;
     }
     //padding: top right bottom left;
 } 
@@ -144,7 +117,7 @@ footer[role="contentinfo"] {
 
 .contentinfo-social, .contentinfo-about {
     box-sizing: border-box;
-    float: Left;
+    float: left;
 }
 
 .contentinfo {
@@ -161,3 +134,4 @@ footer[role="contentinfo"] {
     content: "";
     display: table;
 }
+
