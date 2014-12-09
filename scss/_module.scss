@@ -14,9 +14,7 @@ contain a number of elements and there is likely to be a desire to
 use descendent or child selectors to target those elements. 
 */
 
-
-    
-    nav[role="navigation"] ul {
+ nav[role="navigation"] ul {
         list-style-type: none;
     }
 
@@ -26,8 +24,8 @@ nav[role="navigation"] ul a {
     display: inline-block;
     @include fontSize(16px);
     @include headline-font;
-    margin-left: 8px;
-    padding: 0 4px;
+    margin-left: 6px;
+    padding: 0 1px;
     text-decoration: none;
     transition: border 400ms linear;
     transition: color 400ms linear;
@@ -35,22 +33,24 @@ nav[role="navigation"] ul a {
     
     }
 nav[role="navigation"] ul a:hover {
-    border: 1px solid lighten($color, 30%);
+    border: 2px solid lighten($color, 20%);
     color: lighten($color, 30%);
     transition: border 400ms linear;
     transition: color 400ms linear;
 }
 
+   
+
 header[role="banner"]{
     animation: colorchange-font 5s linear 1s infinite alternate;
     background-color: $color;
-    color: $background-color;
+    color: #fff;
     padding: 12px; 
 }
 
 header[role="banner"] h1 {
     animation: colorchange-font 5s linear 1s infinite alternate;
-    color: $background-color;
+    color: #fff;
 }
 
 header[role="banner"] img {
@@ -63,46 +63,41 @@ header[role="banner"] p {
 }
 
 header[role="banner"] a {
-    color: $background-color;
+    color: #fff;
     @include body-font-italic;
     transition: color 400ms linear;
 }
 
-header[role="banner"] a:hover {
-    color: darken($background-color, 12%);
-    transition: color 400ms linear;
-        
-}
+
 
 .contact svg {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
 
 .contact svg path {
-    fill: $background-color;
+    fill: #fff;
     transition: fill 400ms linear;
 }
 
-.contact a:hover svg path {
-    fill: darken($background-color, 12%);
-    transition: fill 400ms linear;
-}
 
 main[role="main"] h1 {
     background-color: $color;
-    color: $background-color;
-    animation: colorchange-font 5s linear 1s infinite alternate;
+    color: #fff;
     padding: 0 8px;
+
 }
 
 footer[role="contentinfo"] {
-    animation: colorchange-font 5s linear 1s infinite alternate;
     background-color: $color;
-    color: $background-color;    
+    color: #fff;    
     @include body-font-italic;
     line-height: 1;
     padding: 4px 8px 8px 8px;
+    
 }
-        
+
+ 
+ 
+    
 
