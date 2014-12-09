@@ -24,114 +24,50 @@ and use class selectors where appropriate.
   //width: 20%;
 //}
 
-html {
-    background-color: #fff;
+nav[role="navigation"]{
+    text-align: right;
 }
 
-header[role="banner"] {
-    background-color: #84c0f2 lighten($color,20%);
-    color: #1b5b91;
+nav[role="navigation"] ul, .contact ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.banner-logo {
-    box-sizing: border-box;
-    float: left;
-    padding: $gutters;
-    width: 24%;
-    @media (max-width: 480px) {
-        width: 100%;
+nav[role="navigation"] ul {
+    margin-top: 12px;
+}
+
+nav[role="navigation"] ul li, .contact ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+header[role="banner"]{
+    margin: 30px 0 100px 0;
+    @media (min-width: 700px) {
+        float: center;
+        width: 35%;
     }
 }
 
-
-
-.banner-text {
-    box-sizing: border-box;
-    float: right;
-    padding: $gutters;
-    width: 78%;
-    @media (max-width: 480px) {
-        font-size: 30px;
-        width: 100%;
-    }
-}
-
-
-
-
-
-.icecream {
-    background: url('../img/icecream2.jpg') no-repeat center center;
-    background-size: center;
-    line-height: 300px;
-    @media (max-width: 480px) {
-        line-height: 150px; 
-    }
-    height: 300px;
-    @media (max-width: 480px) {
-        height: 150px;
-    }
-    margin-top: $gutters;
+.banner-photo {
     text-align: center;
 }
 
-.controversy, .interactive {
-    box-sizing: border-box;
-    float: left;
-    //margin: 0 $gutters;
-    width: 50%;
-    @media (max-width: 768px) {
-        width: 100%;   
+main[role="main"] {
+    @media (min-width: 700px) {
+        float: right;
+    width: 60%;
     }
-    text-align: justify;
 }
-
-.inner {
-    background-color: #fff;
-     color: #1b5b91;
-    min-height: 200px;
-}
-
-.controversy {
-    padding: $gutters $gutters/1 $gutters 0;
-    @media (max-width: 768px) {
-        padding: $gutters 0 $gutters/3 0;
-    }
-    //padding: top right bottom left;
-} 
-
-.difference {
-    padding: $gutters $gutters/1 $gutters $gutters/1;
-    @media (max-width: 768px) {
-        padding: $gutters/1 0;
-    }
-    //padding: top right bottom left;
-} 
-
 
 footer[role="contentinfo"] {
-    background-color: #1b5b91 ;
-    color: #fff;
-    float: left;
-}
-
-.contentinfo-social, .contentinfo-about {
-    box-sizing: border-box;
-    float: left;
-}
-
-.contentinfo {
-    width: 100%;
-    @media (max-width: 768px) {
-        width: 100%;
+    @media (min-width: 700px) {
+        float: left;
+    width: 150%;
     }
 }
 
-
-
-.group:after {
-    clear: both;
-    content: "";
-    display: table;
-}
+    
 
